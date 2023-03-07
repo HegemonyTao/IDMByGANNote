@@ -4,7 +4,7 @@
 
 ## 逆向设计
 
-![1](./Images/A brief review  1-s2.0-S092702562200355X-main/1.png)
+![1](./Images/review/1.png)
 
 * 传统方式：从结构出发，通过材料性质计算等方法得到结构
 
@@ -15,7 +15,7 @@
 
 ## 生成网络
 
-![2](./Images/A brief review  1-s2.0-S092702562200355X-main/2.png)
+![2](./Images/review/2.png)
 
 ​	生成式网络可以隐式地学习数据分布，可以使用几种ML算法来构建：GANs、变分自动编码器（VAEs）、RNN、强化学习（RL）及它们的变体。
 
@@ -54,11 +54,11 @@
 
 ## 材料数据库
 
-![3](./Images/A brief review  1-s2.0-S092702562200355X-main/3.png)
+![3](./Images/review/3.png)
 
 ​	上表是通过实验或计算得出的数据库
 
-![4](./Images/A brief review  1-s2.0-S092702562200355X-main/4.png)
+![4](./Images/review/4.png)
 
 ​	上表是材料科学方面用于机器学习方面的相关工具
 
@@ -66,7 +66,7 @@
 
 ​	描述符主要用于将原始的材料数据映射到可以作为机器学习输入的形式。如Coulomb Matrices (CMs)、molecular graphs、smooth-overlap-of-atomic-positions （SOAP）atomic structures和bonds and angles ML （BAML）已被用于获取分子和原子结构。但晶体必须考虑晶格周期性和额外的空间群对称性。
 
-![5](./Images/A brief review  1-s2.0-S092702562200355X-main/5.png)
+![5](./Images/review/5.png)
 
 在IMD中使用的各种描述符如上所示：
 
