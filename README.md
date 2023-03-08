@@ -27,7 +27,7 @@
 
 ## GANs用于发现新材料
 
-* CrystalGAN——应用基于CycleGAN的策略来生成晶体结构
+* [CrystalGAN——应用基于CycleGAN的策略来生成晶体结构](./summary/CrystalGAN.pdf)
   * 目标：从观察到的A-H和B-H二元结构中生成新的三元金属杂化物（A-B-H相）
   * 模型输入：晶体几何矩阵和原子的离子位置
   * 做法：使用CycleGAN模型将一个氢化物系统映射到另一个氢化物系统上，以增加数据数量
