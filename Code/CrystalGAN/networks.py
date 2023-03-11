@@ -9,9 +9,9 @@ from __future__ import print_function
 
 
 import tensorflow as tf # machine learning
+import tf_slim as slim
 
 # tf slim to define complex networks easily & quickly
-slim = tf.contrib.slim 
 
 ## Multilayer neural networks
 

@@ -131,10 +131,3 @@ def view_atoms_classifier(image,mg_label,mn_label, o_label, view=True):
 		atoms.edit()
 			
 	return atoms, x, isnan
-
-if '__name__' == '__main__':
-        pass
-else:
-        print("import")
-
-

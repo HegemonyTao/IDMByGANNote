@@ -1,11 +1,11 @@
 # !/usr/local/lib/python2.7 python 
 # -*- coding=utf-8 -*-  
-
+'''
 # bridging the python 2 and python 3 gap
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
-
+'''
 
 import os # saving files
 import numpy as np # for matrix math

@@ -108,12 +108,12 @@ def calc_gradient_penalty(netD, real_data, fake_data):
 
     gradient_penalty = ((gradients.norm(2, dim=1) - 1) ** 2).mean() * 10
     return gradient_penalty
-	
+
 
 def adjust_learning_rate(optimizer, epoch,initial_lr):
-	lr = initial_lr * (0.95 ** (epoch // 10))
-	for param_group in optimizer.param_groups:
-		param_group['lr'] = lr
+    lr = initial_lr * (0.95 ** (epoch // 10))
+    for param_group in optimizer.param_groups:
+        param_group['lr'] = lr
 
 
 def main():
@@ -146,12 +146,12 @@ def main():
     if not os.path.isdir(opt.model_save_dir):
         os.makedirs(opt.model_save_dir)
 
-	## Loss functions
+    ## Loss functions
     adversarial_loss = torch.nn.MSELoss()
     categorical_loss = torch.nn.CrossEntropyLoss()
     continuous_loss = torch.nn.MSELoss()
 
-	## Initialize generator and discriminator
+    ## Initialize generator and discriminator
     generator = Generator(opt)
     discriminator = Discriminator(opt)
     net_Q = QHead_(opt)
@@ -164,17 +164,17 @@ def main():
         continuous_loss.cuda()
 
 
-	## Configure data loader
+    ## Configure data loader
     train_data = np.load(opt.trainingdata, allow_pickle=True)
     dataloader = torch.utils.data.DataLoader(train_data, batch_size = opt.batch_size, shuffle = True)
 
-	## Optimizers
+    ## Optimizers
     optimizer_G = torch.optim.Adam(generator.parameters(), lr=opt.g_lr, betas=(opt.b1, opt.b2))
     optimizer_D = torch.optim.Adam(discriminator.parameters(), lr=opt.d_lr, betas=(opt.b1, opt.b2))
     optimizer_Q = torch.optim.Adam(net_Q.parameters(),
                                    lr=opt.q_lr, betas=(opt.b1, opt.b2))
 
-	## Load model or Initialize
+    ## Load model or Initialize
     if opt.load_model:
         generator.load_state_dict(torch.load(opt.load_generator))
         discriminator.load_state_dict(torch.load(opt.load_discriminator))
@@ -187,10 +187,10 @@ def main():
         print("discriminator weights are initialized")
         net_Q.apply(weights_init)
         print("net Q  weights are initialized")
-	
+
     one = torch.FloatTensor([1])
     mone = one * -1    
-	
+
     if cuda:
         one = one.cuda()
         mone = mone.cuda()
@@ -382,7 +382,7 @@ def main():
                                                             sum(w)/len(w)) 
         
         log_string += "[real Mg : %f] [real Mn : %f] [real O : %f] [fake Mg : %f] [fake Mn : %f] [fake O : %f]" %(sum(r_mg)/len(r_mg), sum(r_mn)/len(r_mn), sum(r_o)/len(r_o),sum(f_mg)/len(f_mg), sum(f_mn)/len(f_mn), sum(f_o)/len(f_o))
-	
+
 
 
 
