@@ -41,7 +41,7 @@
   * 结果：发现了23种适用于光阳极应用的晶体结构，但模型仅限于预测Mg-Mn-O结构
 * [MatGAN——使用具有特定属性的数据输入来预测化学上有效的假设材料](./Summary/MatGAN.pdf)
   * 模型：将生成器和判别器建模为深度神经网络（DNN），可预测200万种新材料，其中92.53%为新材料
-* GMs还被用于发现材料结构、估计结构稳定性和材料合成性，预测结构性能
+* GMs还被用于[发现材料结构、估计结构稳定性和材料合成性](./Summary/2DGAN.pdf)，预测[结构性能](./Summary/ActivateGenerativeDesign.pdf)
 * constrained-crystal deep convolutional GAN (CCDCGAN)——将约束网络作为反向传播器集成到网络中
   * 优点：无需在输入中嵌入材料属性，从而自动优化生成器和预测器，比传统的GAN更快地生成稳定结构
   * 模型及应用：主要包含三维卷积层，应用于Bi-Se体系
