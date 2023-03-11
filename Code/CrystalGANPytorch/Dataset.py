@@ -8,4 +8,4 @@ class AHBDataset(Dataset):
     def __len__(self):
         return np.array(self.AH).shape[0]
     def __getitem__(self, idx):
-        return torch.from_numpy(np.array(self.AH[idx])),torch.from_numpy(np.array(self.BH[idx]))
+        return torch.from_numpy(np.array(self.AH[idx])).to(torch.float32),torch.from_numpy(np.array(self.BH[idx])).to(torch.float32)

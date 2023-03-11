@@ -6,7 +6,7 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 '''
-
+import tensorflow.
 import os # saving files
 import numpy as np # for matrix math
 import matplotlib.pyplot as plt # plot and visualizing data 
@@ -14,18 +14,17 @@ import tensorflow as tf # machine learning
 from data_utils import shuffle, iter_data # analyzing data 
 from tqdm import tqdm # progress bar
 import scipy.io as sio # open matlab ".mat" data files
-
+import tf_slim as slim
 from math import fabs # math manipulation
-
 import networks as net
 import preprocessing 
 import post_processing
 
 # tf slim to define complex networks easily & quickly
-slim = tf.contrib.slim 
+#slim = tf.contrib.slim
 
 #Create a new graph which compute the targets from the replaced Tensors.
-graph_replace = tf.contrib.graph_editor.graph_replace
+#graph_replace = tf.contrib.graph_editor.graph_replace
 
 
 
